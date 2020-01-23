@@ -1,0 +1,24 @@
+package edu.sussex.coms223.lab1;
+
+import java.util.Arrays;
+
+public class ArrayList (E) implements List<E>
+{
+	private Object [] data = new Object (0);
+	
+	public boolean Add(E e) {
+		if (e == null) {
+			Throw new IllegalArray
+								("")
+		data = Arrays.copyOf(data, data.length)
+		data (data.length -1) = e;
+			return true;
+		}
+	}
+	
+	public boolean Add(E e) {
+		int remove = 
+	}
+	
+	
+}
