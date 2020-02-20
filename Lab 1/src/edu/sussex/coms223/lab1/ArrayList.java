@@ -36,8 +36,8 @@ public class ArrayList<E> implements List<E> {
 	@SuppressWarnings("unchecked")
 	@Override
 	public E get(int index) {
-		if (index < 0 || index > data.length - 1)
-			throw new IllegalArgumentException("index out of bounds");
+		if (index < 0 || index >= data.length)
+			throw new IllegalArgumentException("index out of range");
 		return (E) data[index];
 	}
 
