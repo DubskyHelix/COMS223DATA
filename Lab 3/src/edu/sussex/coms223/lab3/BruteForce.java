@@ -52,11 +52,13 @@ public class BruteForce implements PolynomialEvaluator {
 			// iterate twice giving us x*x*x or x**3.
 			for (int j = 0; j < exp - 1; j++) {
 				accum *= x;
+				inst.measuredBasicOperations++;
 			}
 
 			// Add to the running sum the product of the term coefficient and the
 			// accumulated power of x.
 			sum += coeff * accum;
+			inst.measuredBasicOperations++;
 		}
 
 		// Return the running sum plus the final constant term.

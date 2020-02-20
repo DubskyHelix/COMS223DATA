@@ -38,6 +38,7 @@ public class Horner implements PolynomialEvaluator {
 		// multiplying the sum by x and adding the term coefficient.
 		for (int i = 1; i < terms.length; i++) {
 			sum = sum * x + terms[i];
+			inst.measuredBasicOperations++;
 		}
 
 		// Return the computed value of y.
