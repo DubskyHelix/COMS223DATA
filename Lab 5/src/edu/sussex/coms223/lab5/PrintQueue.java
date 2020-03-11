@@ -111,5 +111,11 @@ public class PrintQueue {
 	public void lprd() {
 		// TODO 7: if the size of the print queue is greater than 1 then
 		// dequeue the Job at the head of the queue and enqueue it to the rear.
+		
+		if (printQ.size() > 1)
+		{
+			Job first = printQ.dequeue();
+			printQ.enqueue(first);
+		}
 	}
 }

@@ -16,7 +16,7 @@ class PrintQueueDriver {
 	 */
 	public enum Command {
 		// TODO 8: add new Command enum lprd
-		lpr, lpq, lprmid, lprmactive, lprmall, quit
+		lpr, lpq, lprmid, lprmactive, lprmall, quit, lprd
 	}
 
 	/**
@@ -149,8 +149,15 @@ class PrintQueueDriver {
 
 		myQ.lprm(owner);
 	}
+	
+	
 
 	// TODO 9: add static void method lprd that calls lprd method on myQ.
+	
+	static void lprd() {
+		myQ.lprd();
+	}
+
 
 	/**
 	 * The entry point into this driver.
@@ -178,6 +185,9 @@ class PrintQueueDriver {
 				break;
 			case lprmall:
 				lprmall();
+				break;
+			case lprd:
+				lprd();
 				break;
 			// TODO 10: add new case for lprd that calls lprd method
 			default:

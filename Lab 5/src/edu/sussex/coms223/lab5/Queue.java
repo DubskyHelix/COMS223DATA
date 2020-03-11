@@ -3,6 +3,7 @@ package edu.sussex.coms223.lab5;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * The class Queue implements the interface described in section 6.3 of the
@@ -27,8 +28,16 @@ public class Queue<T> {
 	public void enqueue(T item) {
 		// TODO 1: check if the item is null and if it is throw an
 		// IllegalArgumentException.
+		
+		if (item == null)
+		{
+			throw new IllegalArgumentException();
+		}
 
 		// TODO 2: add the item to the data list.
+		
+		list.add(item);
+		
 	}
 
 	/**
@@ -40,14 +49,25 @@ public class Queue<T> {
 	public T dequeue() {
 		// TODO 3: check if the data list is empty and if it is throw a
 		// NoSuchElementException.
+		
+		if (list.isEmpty())
+		{
+			throw new NoSuchElementException();
+		}
 
 		// TODO 4: declare a variable of type T named first and initialize it to element
 		// 0 of the data list
+		
+		T first = list.get(0);
+		
 
 		// TODO 5: remove element 0 from the data list
-
+		
+		list.remove(0);
+		
 		// TODO 6: return variable first
-		return null;
+		
+		return first;
 	}
 
 	/**
